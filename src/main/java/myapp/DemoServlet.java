@@ -379,9 +379,7 @@ class TTT {
       msg = String.format("|%s|%s|%s|\n", board[i][0], board[i][1], board[i][2]);
       sb.append(msg);
     }
-    msg = String.format("+-+-+-+\n");
-    sb.append(msg);
-    msg = "```";
+    msg = String.format("+-+-+-+```\n");
     sb.append(msg);
     msg = sb.toString();
     return msg;
@@ -1138,6 +1136,10 @@ class Processor {
     else if(CMD.HELP.equals(cmd)) {
       return executeCommandHelp(command);
     }
+    else {
+      return executeCommandHelp(command);
+    }
+
     return null;
   }
 
